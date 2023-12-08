@@ -5,8 +5,21 @@
   Once you've implemented the logic, test your code by running
 */
 
+//function to check if it is vowels
+
+
 function countVowels(str) {
-    // Your code here
+  let str1 = str.toLowerCase();
+  const vowelset = new Set( ['a','i','o','e','u']);
+  let arr = str1.split('');
+  let numvowels =0;
+  arr.forEach(character => {
+    if (vowelset.has(character)){
+      numvowels++;
+    }
+  })
+
+  return numvowels;
 }
 
-module.exports = countVowels;
+module.exports = countVowels; 
